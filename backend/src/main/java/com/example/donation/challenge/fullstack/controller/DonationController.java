@@ -3,6 +3,7 @@ package com.example.donation.challenge.fullstack.controller;
 import com.example.donation.challenge.fullstack.dto.DonationRecordDTO;
 import com.example.donation.challenge.fullstack.dto.DonationResponseDTO;
 import com.example.donation.challenge.fullstack.service.DonationService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +22,8 @@ public class DonationController {
     }
 
     @PostMapping
-    public ResponseEntity<DonationResponseDTO> createDonation(@RequestBody DonationRecordDTO dto) {
+    public ResponseEntity<DonationResponseDTO> createDonation(
+            @Valid @RequestBody DonationRecordDTO dto) {
         DonationResponseDTO created = donationService.createDonation(dto);
         return ResponseEntity.status(201).body(created);
     }

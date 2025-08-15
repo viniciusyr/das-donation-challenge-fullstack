@@ -17,7 +17,7 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
-@Table(schema = "TB_DONATIONS")
+@Table(name = "TB_DONATIONS")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -42,5 +42,7 @@ public class DonationModel {
         this.type = type;
         this.quantity = quantity;
         this.date = date;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 }
