@@ -50,6 +50,7 @@ public class DonationService {
         DonationModel existingDonation = donationRepository.findById(id)
                 .orElseThrow(() -> new DonationException.DonationNotFound("Donation not found: " + id));
 
+        log.info("Donation successfully deleted: {}", id);
         donationRepository.delete(existingDonation);
     }
 
