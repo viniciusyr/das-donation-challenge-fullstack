@@ -10,8 +10,9 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>donation.challenge.fullstack</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>donation.challenge.fullstack</name>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<name>donation.challenge.fullstack Parent</name>
 	<description>DAS - Full Stack Challenge</description>
 
 	<modules>
