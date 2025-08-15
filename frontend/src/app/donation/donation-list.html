@@ -1,0 +1,35 @@
+<div class="max-w-4xl mx-auto mt-6 overflow-x-auto">
+  <table class="min-w-full bg-white rounded-lg shadow-md divide-y divide-gray-200">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">Donor</th>
+        <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">Type</th>
+        <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">Quantity</th>
+        <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">Date</th>
+        <th class="px-6 py-3 text-center text-sm font-medium text-gray-700 uppercase tracking-wider">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <tr *ngFor="let donation of donations" class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 whitespace-nowrap text-gray-800 font-semibold">{{ donation.donorName }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-gray-600">{{ donation.type }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-gray-600">{{ donation.quantity }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-gray-600">{{ donation.date | date:'mediumDate' }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-center flex justify-center gap-2">
+          <button 
+            (click)="updateDonation(donation)" 
+            class="bg-gray-400 text-white px-3 py-1 rounded-md hover:bg-gray-500 transition-colors"
+          >
+            Update
+          </button>
+          <button 
+            (click)="deleteDonation(donation.id)" 
+            class="bg-gray-500 text-white px-3 py-1 rounded-md hover:bg-gray-600 transition-colors"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

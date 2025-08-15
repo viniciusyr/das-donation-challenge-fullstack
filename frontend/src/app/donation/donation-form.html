@@ -1,0 +1,57 @@
+<form (ngSubmit)="submitDonation()" class="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md space-y-4">
+  <div>
+    <label class="block mb-1 font-semibold text-gray-700">Donor Name</label>
+    <input 
+      type="text" 
+      [(ngModel)]="donorName" 
+      name="donorName" 
+      required 
+      maxlength="20"
+      class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+    />
+  </div>
+
+  <div>
+    <label class="block mb-1 font-semibold text-gray-700">Donation Type</label>
+    <select 
+      [(ngModel)]="type" 
+      name="type"
+      class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+    >
+      <option value="MONEY">Money</option>
+      <option value="FOOD">Food</option>
+      <option value="CLOTHES">Clothes</option>
+      <option value="OTHER">Other</option>
+    </select>
+  </div>
+
+  <div>
+    <label class="block mb-1 font-semibold text-gray-700">Quantity</label>
+    <input 
+      type="number" 
+      placeholder="Quantity" 
+      [(ngModel)]="quantity" 
+      name="quantity" 
+      required
+      class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+    />
+  </div>
+
+  <div>
+    <label class="block mb-1 font-semibold text-gray-700">Date</label>
+    <input 
+      type="date" 
+      [(ngModel)]="date" 
+      name="date" 
+      required
+      class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+    />
+  </div>
+
+  <button 
+    type="submit" 
+    class="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
+  >
+    Add Donation
+  </button>
+</form>
