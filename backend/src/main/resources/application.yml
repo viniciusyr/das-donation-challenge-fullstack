@@ -14,7 +14,7 @@ spring:
               non_contextual_creation: true
 
     flyway:
-      enabled: false
+      enabled: true
       baseline-on-migrate: false
 
 
