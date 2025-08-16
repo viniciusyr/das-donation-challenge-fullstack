@@ -16,7 +16,7 @@
  <a href="#features">Features</a> • 
  <a href="#getting-started">Getting Started</a> • 
  <a href="#api-endpoints">API Endpoints</a> •
- <a href="#acknowledgements">API Endpoints</a>
+ <a href="#acknowledgements">Acknowledgements</a>
 </p>
 
 <p align="center">
